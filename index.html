@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>Магазин строительного инструмента Technomart</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i|PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet"> 
 </head>
 
 <body>
@@ -43,8 +44,10 @@
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
         <div class="login">
-          <a class="button-login" href="#">Войти</a>
-          <a class="button-login" href="#">Регистрация</a>
+          <div class="login-enter">
+            <a class="button-login" href="#">Войти</a>
+            <a class="button-login" href="#">Регистрация</a>
+          </div>
         </div>
       </section>
       <nav class="main-navigation">
@@ -120,25 +123,25 @@
       <ul class="popular-products-list">
         <li class="popular-products-item">
           <img src="img/BFG9000.jpg" alt="BFG 9000">
-          <p>Перфоратор BOSCH BFG 9000</p>
+          <p class="item-name">Перфоратор BOSCH BFG 9000</p>
           <span class="old-price">32500 Р.</span>
           <b class="new-price">25500 Р.</b>
         </li>
         <li class="popular-products-item">
           <img src="img/BFG3000.jpg" alt="BFG 3000">
-          <p>Перфоратор BOSCH BFG 3000</p>
+          <p class="item-name">Перфоратор BOSCH BFG 3000</p>
           <span class="old-price">22500 Р.</span>
           <b class="new-price">15500 Р.</b>
         </li>
         <li class="popular-products-item">
           <img src="img/BFG6000.jpg" alt="BFG 6000">
-          <p>Перфоратор BOSCH BFG 6000</p>
+          <p class="item-name">Перфоратор BOSCH BFG 6000</p>
           <span class="old-price">30500 Р.</span>
           <b class="new-price">25500 Р.</b>
         </li>
         <li class="popular-products-item products-item-new">
           <img src="img/BFG2000.jpg" alt="BFG 2000">
-          <p>Перфоратор BOSCH BFG 2000 Р.</p>
+          <p class="item-name">Перфоратор BOSCH BFG 2000 Р.</p>
           <b class="new-price">12500 Р.</b>
         </li>
       </ul>
@@ -309,7 +312,7 @@
     </div>
   </footer>
   <div class="modal modal-write-us">
-    <form action="">
+    <form action="https://echo.htmlacademy.ru"  method="post">
       <label for="name">Ваше имя:</label>
       <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
       <label for="email">Ваш e-mail:</label>
@@ -320,7 +323,6 @@
     </form>
   </div>
   <div class="modal modal-map">
-  </div>
   </div>
 </body>
 

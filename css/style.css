@@ -179,14 +179,14 @@ input[type="radio"].visually-hidden {
 .popular-products-item {
   font-family: 'PT-sans',Arial,sans-serif;
 }
-.popular-products-item p {
+.item-name {
   margin:0;
   padding:0;
   font-weight: bold;
   font-size:18px;
   line-height: 20px;
 }
-.popular-products-item span {
+.old-price {
   text-decoration: line-through;
   font-size:17px;
   line-height: 18px;
@@ -317,4 +317,141 @@ input[type="radio"].visually-hidden {
 .feedback b,
 .developer b {
   color:#d4b275;
+}
+.user-name {
+  font-size:21px;
+  line-height: 21px;
+}
+.user-button {
+  color:#32425c;
+  box-shadow: 0 2px #49586f;
+  font-size:16px;
+  line-height: 18px;
+}
+.breadcumb {
+  font-size:13px;
+  line-height: 18px;
+  color:black;
+  text-transform: uppercase;
+}
+.filters-caption {
+  background-color: #f2f6f8;
+}
+.filters-caption h2 {
+  color:#32425c;
+  font-size:30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin:0;
+  padding:0;
+}
+.options {
+  font-family: 'PT-sans',Arial,sans-serif;
+}
+.form-caption {
+  background-color: #f7f3ec;
+}
+.form-caption h3 {
+  font-size:13px;
+  font-weight:18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin:0;
+  padding:0;
+}
+.range-form {
+  border:none;
+  margin:0;
+  padding:0;
+}
+.options legend {
+  font-size:17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin:0;
+  padding:0;
+}
+.price-controls input {
+  font-size:17px;
+  line-height:18px;
+}
+.vendors-form,
+.power-form  {
+  border:none;
+  margin:0;
+  padding:0;
+  font-size:15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.button-show {
+  font-size:13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border:2px solid #e5e5e5;
+}
+.sorting-list {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.sorter-head b {
+  font-size:13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.product-list {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.sorter-name a {
+  color:#acaaa5;
+  font-size:13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.sorter-name a.active {
+  color:#ee3643;
+}
+.hover-button {
+  font-size:14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.in-cart {
+  color:#fff;
+  background-color:#63a63e;
+  padding:3px;
+}
+.in-bookletter {
+  color:#32425c;
+  border:3px solid #63a63e;
+}
+.page-number {
+  font-size:13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border:1px solid #e5e5e5;
+  color:black;
+}
+.page-number.active {
+  color:#fef2f2;
+  border:none;
+  background-color: #ee3643;
+  padding:1px;
+}
+.about-device h3 {
+  margin:0;
+  padding:0;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.about-device p {
+  padding:0;
+  margin:0;
 }
