@@ -34,6 +34,7 @@ input[type="radio"].visually-hidden {
 }
 .bottom-wrapper {
   background-color: #f4f7f9;
+  padding-bottom: 60px;
 }
 .container {
   width:940px;
@@ -276,18 +277,84 @@ input[type="radio"].visually-hidden {
   padding-left:34px;
   padding-right:52px;
 }
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top:60px;
+}
+.offer-column-1 {
+  display: flex;
+  flex-wrap: wrap;
+  width:620px;
+  margin-right:20px;
+}
+.offer-column-1 .offer-item:nth-child(2n) {
+  margin-left: 20px;
+}
+.offer-column-2 {
+  display: flex;
+  flex-direction: column;
+}
+.offer-item  {
+  align-self: flex-start;
+  min-width: 300px;
+  margin-bottom:20px;
+  padding-top:20px;
+  padding-left:25px;
+  box-sizing: border-box;
+  padding-bottom: 22px;
+  position: relative;
+}
+.first-offer::before {
+  content: "";
+  position: absolute;
+  width:60px;
+  height:60px;
+  background-image: url('../img/new flag.png');
+  background-repeat: no-repeat;
+  right:0;
+  top:0;
+}
+.first-offer svg,
+.fourth-offer svg {
+  position: absolute;
+  right:42px;
+  bottom:28px;
+}
+.second-offer svg,
+.third-offer svg,
+.fives-offer svg {
+  position: absolute;
+  right:29px;
+  bottom:28px;
+}
 .offer-item h3 {
   font-size:24px;
   line-height:30px;
   color:#fff;
   margin:0;
   padding:0;
+  margin-bottom:13px;
 }
-.offer-item a {
+.offer-btn {
+  display: inline-block;
   font-size:14px;
   line-height: 18px;
   color:#fff;
   background: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  padding:10px 0;
+  width:135px;
+  text-align: center;
+  border-radius: 3px;
+}
+.offer-btn:hover,
+.offer-btn:focus {
+  background: rgba(0, 0, 0, 0.2);
+}
+.offer-btn:active {
+  background: rgba(0, 0, 0, 0.3);
 }
 .first-offer {
   background-color: #ffbf47;
@@ -304,25 +371,75 @@ input[type="radio"].visually-hidden {
 .fives-offer {
   background-color:#ffc047;
 }
+.offer-slider {
+  position: relative;
+}
 .slider-item-first {
   width:620px;
   height:266px;
   background-image: url('../img/drills.jpg');
+  background-color: #333028;
+  display: none;
+}
+.slider-item-second {
+  width:620px;
+  height:266px;
+  background-image: url('../img/perfos.jpg');
+  display: none;
+  background-color: #594f43;
 }
 .slider-inner {
   color:#fff;
+  margin-top:-20px;
 }
-.slider-inner h3 {
-  font-size: 36px;
-  line-height: 36px;
-  margin:0;
-  padding:0;
+.slider-arrow {
+  width:28px;
+  height:28px;
+  border:none;
+  border-top:3px solid #fff;
+  border-left:3px solid #fff;
+  position:absolute;
+  font-size:0;
+  background-color: transparent;
+  cursor: pointer;
 }
-.slider-inner p {
-  font-size:18px;
-  line-height: 24px;
-  margin:0;
-  padding:0;
+.arrow-left {
+  top:100px;
+  left:32px;
+  transform: rotate(-45deg);
+}
+.arrow-right {
+  top:100px;
+  right:26px;
+  transform: rotate(135deg);
+}
+.slider-controls {
+  position: absolute;
+  left: 295px;
+  bottom: 33px;
+  text-align: center;
+  z-index: 100;
+}
+.slider-control {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  border: 6px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#slider-1:checked ~ .slider-controls .slider-control-1,
+#slider-2:checked ~ .slider-controls .slider-control-2 {
+background-color: #ca2c37;
+}
+#slider-1:checked ~ .slider-inner .slider-item-first {
+  display:block;
+}
+#slider-2:checked ~ .slider-inner .slider-item-second {
+  display:block;
 }
 .open-catalog {
   color:#fff;
@@ -330,11 +447,35 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   text-transform: uppercase;
   background-color: #ee3643;
+  padding:10px 48px;
+  border-radius: 3px;
+  position: absolute;
+  bottom:42px;
+  left:25px;
 }
-.slider-item-second {
-  width:620px;
-  height:266px;
-  background-image: url('../img/perfos.jpg');
+.open-catalog:hover,
+.open-catalog:focus {
+  background-color: #ca2c37;
+}
+.open-catalog:active {
+  background-color: #ba2732;
+}
+.slider-item h3 {
+  text-transform: uppercase;
+  margin:0;
+  padding:0;
+  padding-top:22px;
+  padding-left:22px;
+  font-size: 36px;
+  line-height: 36px;
+}
+.slider-item p {
+  font-size:18px;
+  line-height: 24px;
+  margin:0;
+  padding:0;
+  padding-top:2px;
+  padding-left:25px;
 }
 .popular-products-header-left h3 {
   font-size:30px;
@@ -399,7 +540,7 @@ input[type="radio"].visually-hidden {
   padding:0;
   list-style: none;
 }
-.slider-controls label {
+.services-controls label {
   font-size:21px;
   line-height: 30px;
   color:#fff;
