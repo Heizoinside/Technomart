@@ -502,7 +502,7 @@ background-color: #ca2c37;
   padding-bottom: 26px;
   padding-right: 24px;
 }
-.popular-products-header-right a {
+.button-product {
   color:#fff;
   text-transform: uppercase;
   font-size:14px;
@@ -655,25 +655,76 @@ background-color: #ca2c37;
   color:#c1c6ce;
   border-color:#c1c6ce;
 }
+.popular-vendors-header {
+  background-color: #f9f5f0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding:7px 0;
+}
 .popular-vendors-header-left h3 {
   font-size:30px;
   line-height: 30px;
   text-transform: uppercase;
   color:#32425c;
   margin:0;
-  padding:0;
+  padding-top:22px;
+  padding-bottom: 20px;
+  padding-left:24px;
+  font-weight: normal;
 }
-.popular-vendors-header-right a {
+.popular-vendors-header-right {
+  padding-top:26px;
+  padding-bottom: 26px;
+  padding-right: 24px;
+}
+.button-vendor {
   color:#fff;
   text-transform: uppercase;
   font-size:14px;
   line-height: 18px;
   background-color: #ee3643;
+  padding:11px 69px;
 }
 .popular-vendors-list {
+  list-style: none;
   margin:0;
   padding:0;
-  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popular-vendors-item {
+  border:1px solid #eaeaea;
+  margin-top:20px;
+  background-color: #ffffff;
+}
+.popular-vendors-item a {
+  min-width: 218px;
+  min-height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-vendors-item a:hover,
+.popular-vendors-item a:focus {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  transition: 0.4s;
+}
+.popular-vendors-item a:active {
+  box-shadow: 0 4px 5px  2px rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
+}
+.popular-vendors-item:nth-child(4n) img {
+  margin-bottom:11px;
+}
+.button-pv:hover,
+.button-pv:focus {
+  background-color: #ca2c37;
+}
+.button-pv:active {
+  background-color: #ba2732;
 }
 .services-controls label {
   font-size:21px;
