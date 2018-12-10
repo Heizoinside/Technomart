@@ -263,7 +263,8 @@ input[type="radio"].visually-hidden {
   padding-left:30px;
   padding-right:30px;
 }
-.main-navigation-item:hover {
+.main-navigation-item:hover,
+.main-navigation-item:focus {
   background-color: #293449;
 }
 .main-navigation-item:active {
@@ -610,7 +611,8 @@ background-color: #ca2c37;
   align-content: center;
   display:none;
 }
-.popular-products-item:hover > .item-actions {
+.popular-products-item:hover > .item-actions,
+.popular-products-item:focus > .item-actions {
   display:flex;
 }
 .in-cart {
