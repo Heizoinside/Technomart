@@ -80,7 +80,8 @@
       </nav>
     </div>
   </header>
-  <main class="container">
+  <main>
+    <div class="container">
     <article class="offers">
       <h2 class="visually-hidden">Что наш магазин может предложить.</h2>
       <div class="offer-column-1">
@@ -282,7 +283,9 @@
         </li>
       </ul>
     </section>
+    </div>
     <div class="bottom-wrapper">
+      <div class="container">
       <section class="services">
         <h3>Сервисы</h3>
         <p>
@@ -290,38 +293,46 @@
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="service-sliders">
-          <input type="radio" id="service-slider-1" name="service-slide" checked>
-          <input type="radio" id="service-slider-2" name="service-slide">
-          <input type="radio" id="service-slider-3" name="service-slide">
-          <div class="slider-controls">
-            <label for="service-slider-1">Доставка</label>
-            <label for="service-slider-2">Гарантия</label>
-            <label for="service-slider-3">Кредит</label>
+          <input  class="visually-hidden" type="radio" id="service-slider-1" name="service-slide" checked>
+          <input  class="visually-hidden" type="radio" id="service-slider-2" name="service-slide">
+          <input  class="visually-hidden" type="radio" id="service-slider-3" name="service-slide">
+          <div class="service-slider-controls">
+            <label class="service-slider-control" for="service-slider-1">Доставка</label>
+            <label class="service-slider-control" for="service-slider-2">Гарантия</label>
+            <label class="service-slider-control" for="service-slider-3">Кредит</label>
           </div>
           <ul class="service-slider-inner">
             <li class="service-slider slider-delivery">
+              <div class="delivery-wrapper">
               <h4>Доставка</h4>
               <p>Мы с удовольствием доставим ваш товар прямо
                 к вашему подъезду совершенно бесплатно!
-                Ведь мы неплохо заработаем, </p>
+                Ведь мы неплохо заработаем, поднимая его на ваш этаж! </p>
+              </div>
             </li>
             <li class="service-slider slider-guarantee">
+              <div class="guarantee-wrapper">
               <h4>Гарантия</h4>
               <p>
                 Если купленный у нас товар поломается или заискрит,
                 а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
                 Дом уж восстановите как-нибудь сами.</p>
+                </div>
             </li>
             <li class="service-slider slider-credit">
+              <div class="credit-wrapper">
               <h4>Кредит</h4>
               <p>Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.</p>
+                <a href="" class="button-pv button-credit">Отправить заявку</a>
+                </div>
             </li>
           </ul>
         </div>
       </section>
     </div>
-    <article class="about-us">
+    </div>
+    <article class="about-us container">
       <h2 class="visually-hidden">Описание и контакты интернет магазина Техномарт</h2>
       <section class="details">
         <h3>Компания «Техномарт»</h3>
@@ -347,6 +358,7 @@
   </main>
   <footer>
     <div class="footer-top-wrapper">
+      <div class="container">
       <nav class="footer-navigation">
         <div class="footer-logo-container">
           <a class="footer-logo">Техномарт</a>
@@ -371,7 +383,7 @@
       </nav>
     </div>
     <div class="footer-down-wrapper">
-      <aside class="page-footer">
+      <aside class="page-footer container">
         <div class="copyright">
           <p>2010-2017 Компания "Техномарт" Все права защищены</p>
         </div>
