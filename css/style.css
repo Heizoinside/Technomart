@@ -45,51 +45,95 @@ input[type="radio"].visually-hidden {
   display:flex;
   justify-content: space-between;
 }
-.top-item {
-  display: inline-block;
-  padding-top:9px;
-
+.search-form {
+  margin-right: auto;
+  position: relative;
 }
-.top-link:nth-child(1) {
-  padding-left:34px;
-  padding-right:22px;
+.search-field {
+  border:none;
+  background-color: #293449;
+  font:inherit;
+  font-size:17px;
+  line-height: 18px;
+  color:#fff;
+  height:42px;
+  width:270px;
+  padding-left:48px;
 }
-.top-link:nth-child(2) {
+.search-field:hover {
+  background-color: #212a3a;
+}
+.search-field:focus {
+  background-color: #fff;
+  color:#000;
+  outline: none;
+}
+.search-field:focus ~ .search-btn path {
+  fill:#ee3643;
+}
+.search-btn {
+  position: absolute;
+  top:12px;
+  left:10px;
+  background-color: transparent;
+  border:none;
+  cursor:pointer;
+}
+.link-bookmarks {
+  padding-left:44px;
+  position: relative;
+}
+.link-bookmarks::before {
+  position: absolute;
+  content:"";
+  width:14px;
+  height:16px;
+  background:url('../img/icon-bookmark.svg') no-repeat center;
+  left:16px;
+  opacity: 0.3;
+}
+.link-cart {
   padding-left:50px;
+  position: relative;
 }
-.top-link:nth-child(3) {
+.link-cart::before {
+  position: absolute;
+  content:"";
+  width:14px;
+  height:16px;
+  background:url('../img/icon-cart.svg') no-repeat center;
+  left:18px;
+  opacity: 0.3;
+}
+.link-cart:hover::before,
+.link-cart:focus::before,
+.link-bookmarks:hover::before,
+.link-bookmarks:focus::before {
+  opacity: 1;
+}
+.link-cart:active::before,
+.link-bookmarks:active::before {
+  opacity:0.3;
+}
+.link-order {
   padding-left:21px;
 }
 .top-link {
-  width:110px;
+  width:150px;
   font-size:17px;
   line-height: 18px;
   color:#fff;
   position:relative;
-  text-align: center;
   padding-top:12px;
   padding-bottom:12px;
-  padding-right:21px;
+  box-sizing: border-box;
+
 }
-.bookletter-pic {
-  position:absolute;
-  top:14px;
-  left:5px;
-}
-.cart-pic {
-  position: absolute;
-  left:17px;
-  top:14px;
-}
-.green {
+.link-order {
   background-color: #63a63e;
 }
 .top-link.active {
   background-color:#ee3643;
-}
-.top-link.active circle,
-.top-link.active path {
-  fill:#f3737c;
 }
 .top-link:hover,
 .top-link:focus {
@@ -107,22 +151,12 @@ input[type="radio"].visually-hidden {
 .top-link.active:active {
   background-color: #ba2732;
 }
-.top-link:hover path,
-.top-link:focus path,
-.top-link:hover circle,
-.top-link:focus circle {
-  fill:#fff;
-}
-.top-link:active path,
-.top-link:active circle {
-  fill:#8b8e94;
-}
-.green:hover,
-.green:focus {
+.link-order:hover,
+.link-order:focus {
    background-color: #5fbb2d;
    outline: none;
 }
-.green:active {
+.link-order:active {
   background-color: #518534;
   color:#aac39b;
 }
@@ -144,44 +178,10 @@ input[type="radio"].visually-hidden {
 .header-logo:active {
   background-color: #ba2732;
 }
-.search-field {
-  border:none;
-  background-color: #293449;
-  font:inherit;
-  font-size:17px;
-  line-height: 18px;
-  color:#fff;
-  height:42px;
-  width:280px;
-  padding-left:48px;
-}
-.search-field:hover {
-  background-color: #212a3a;
-}
-.search-field:focus {
-  background-color: #fff;
-  color:#000;
-  outline: none;
-}
-.search-field:focus ~ .search-btn path {
-  fill:#ee3643;
-}
-.search-field-container {
-  position: relative;
-}
-.search-btn {
-  position: absolute;
-  top:12px;
-  left:10px;
-  background-color: transparent;
-  border:none;
-  cursor:pointer;
-}
 .intro-login {
   display:flex;
   justify-content: space-between;
   padding-top:33px;
-  margin-bottom:-2px;
 
 }
 .intro-wrapper {
@@ -1186,16 +1186,20 @@ background-color: #ca2c37;
 .user-name:active {
   color: #b2b2b2;
 }
-.user-wrapper:hover path,
-.user-wrapper:focus circle,
-.user-wrapper:hover path,
-.user-wrapper:focus circle
- {
+.user-wrapper:hover path {
   fill:#32425c;
+  outline:none;
 }
-.user-logout:active path,
-.user-logout:active circle {
+.user-logout:active path {
   fill:#b2b2b2;
+}
+.user-name:focus path {
+  fill:#32425c;
+  outline:none;
+}
+.user-logout:focus path {
+  fill:#b2b2b2;
+  outline:none;
 }
 .user-name:active path {
   fill:#c5c5c5;
@@ -1235,8 +1239,8 @@ background-color: #ca2c37;
 
 }
 .breadcumbs {
-  padding-top:20px;
-  padding-bottom: 20px;
+  padding-top:17px;
+  padding-bottom: 18px;
 }
 .breadcumb-home {
   padding-right: 35px;
