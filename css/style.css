@@ -31,6 +31,7 @@ input[type="radio"].visually-hidden {
 }
 .top-wrapper {
   background-color: #293449;
+
 }
 .bottom-wrapper {
   background-color: #f4f7f9;
@@ -45,57 +46,83 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 .top-item {
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
+  padding-top:9px;
+
+}
+.top-link:nth-child(1) {
+  padding-left:34px;
+  padding-right:22px;
 }
 .top-link:nth-child(2) {
-  padding-right:10px;
+  padding-left:50px;
+}
+.top-link:nth-child(3) {
+  padding-left:21px;
 }
 .top-link {
   width:110px;
-  padding:11px 20px;
   font-size:17px;
   line-height: 18px;
   color:#fff;
-  text-align: center;
   position:relative;
+  text-align: center;
+  padding-top:12px;
+  padding-bottom:12px;
+  padding-right:21px;
 }
-.top-link svg {
+.bookletter-pic {
   position:absolute;
-  top:12px;
-  left:9px;
+  top:14px;
+  left:5px;
 }
-.link-green {
+.cart-pic {
+  position: absolute;
+  left:17px;
+  top:14px;
+}
+.green {
   background-color: #63a63e;
 }
-.link-blue.active {
+.top-link.active {
   background-color:#ee3643;
 }
-.link-blue:hover,
-.link-blue:focus {
+.top-link.active circle,
+.top-link.active path {
+  fill:#f3737c;
+}
+.top-link:hover,
+.top-link:focus {
   background-color: #212a3a;
   outline: none;
 }
-.link-blue:active {
+.top-link:active {
   color:#a2a5a9;
   background-color: #161d29;
 }
-.link-blue:hover path,
-.link-blue:focus path,
-.link-blue:hover circle,
-.link-blue:focus circle {
+.top-link.active:hover,
+.top-link.active:focus {
+  background-color: #ca2c37;
+}
+.top-link.active:active {
+  background-color: #ba2732;
+}
+.top-link:hover path,
+.top-link:focus path,
+.top-link:hover circle,
+.top-link:focus circle {
   fill:#fff;
 }
-.link-blue:active path,
-.link-blue:active circle {
+.top-link:active path,
+.top-link:active circle {
   fill:#8b8e94;
 }
-.link-green:hover,
-.link-green:focus {
+.green:hover,
+.green:focus {
    background-color: #5fbb2d;
    outline: none;
 }
-.link-green:active {
+.green:active {
   background-color: #518534;
   color:#aac39b;
 }
@@ -145,7 +172,7 @@ input[type="radio"].visually-hidden {
 .search-btn {
   position: absolute;
   top:12px;
-  left:17px;
+  left:10px;
   background-color: transparent;
   border:none;
   cursor:pointer;
@@ -153,7 +180,9 @@ input[type="radio"].visually-hidden {
 .intro-login {
   display:flex;
   justify-content: space-between;
-  padding-top:30px;
+  padding-top:33px;
+  margin-bottom:-2px;
+
 }
 .intro-wrapper {
   width:300px;
@@ -165,11 +194,11 @@ input[type="radio"].visually-hidden {
 .about {
   width:200px;
   margin-left: 52px;
-  margin-top:2px;
+
+
 }
 .contacts {
   text-align: center;
-  margin-top:5px;
 }
 .about p {
   color:#ee434f;
@@ -190,9 +219,9 @@ input[type="radio"].visually-hidden {
 }
 .intro-phone {
   display:inline-block;
-  padding-top:5px;
+  padding-top:7px;
   padding-bottom:5px;
-  padding-left:65px;
+  padding-left:67px;
   padding-right:55px;
   border: 3px solid #fff;
   margin-top:15px;
@@ -202,15 +231,15 @@ input[type="radio"].visually-hidden {
 }
 .intro-phone svg {
   position:absolute;
-  left:6px;
-  top:7px;
+  left:9px;
+  top:11px;
 }
 .intro-adress {
   display:inline-block;
   margin:0;
   padding:0;
   padding-top:3px;
-  padding-left:12px;
+  padding-left:34px;
 }
 .button-login {
   color:#000;
@@ -262,7 +291,7 @@ input[type="radio"].visually-hidden {
   color:#fff;
   text-align: center;
   padding-top:20px;
-  padding-bottom:22px;
+  padding-bottom:24px;
   padding-left:30px;
   padding-right:30px;
 }
@@ -1125,15 +1154,85 @@ background-color: #ca2c37;
   color:#ee3643;
   box-shadow:none;
 }
-.user-name {
+.user-field {
+  width:300px;
+  box-sizing: border-box;
+}
+.user-wrapper {
+  margin:0;
+  padding:0;
   font-size:21px;
   line-height: 21px;
+  background-color: #fff;
+  margin-top:15px;
+  padding-top:10px;
+  padding-bottom:10px;
+  position: relative;
+}
+.user-name {
+  color:black;
+  padding-left:47px;
+}
+.user-name svg {
+  position: absolute;
+  left:15px;
+  top:12px;
+}
+.logout-pic {
+  position: absolute;
+  right:10px;
+  top:12px;
+}
+.user-name:active {
+  color: #b2b2b2;
+}
+.user-wrapper:hover path,
+.user-wrapper:focus circle,
+.user-wrapper:hover path,
+.user-wrapper:focus circle
+ {
+  fill:#32425c;
+}
+.user-logout:active path,
+.user-logout:active circle {
+  fill:#b2b2b2;
+}
+.user-name:active path {
+  fill:#c5c5c5;
+}
+.user-buttons {
+  margin-top:6px;
+  padding-left: 18px;
 }
 .user-button {
   color:#32425c;
-  box-shadow: 0 2px #49586f;
+  box-shadow: inset 0 -1px 0 #49586f;
   font-size:16px;
   line-height: 18px;
+}
+.user-button:hover,
+.user-button:focus {
+  color:#ee3643;
+  box-shadow: inset 0 -1px 0 #ee3643;
+}
+.user-button:active {
+  color:#b7bfc8;
+  box-shadow: inset 0 -1px 0 #b7bfc8;
+}
+.button-user-ord {
+  margin-right:31px;
+  position: relative;
+}
+.button-user-ord::after {
+  content: "";
+  position: absolute;
+  background-color: #32425c;
+  width:4px;
+  height:4px;
+  border-radius:2px;
+  top:8px;
+  right:-20px;
+
 }
 .breadcumbs {
   padding-top:20px;
@@ -1299,7 +1398,7 @@ background-color: #ca2c37;
   position: relative;
   cursor: pointer;
 }
-.interface-checkbox input[type="checkbox"] ~ .checkbox-indicator {
+.interface-checkbox input ~ .checkbox-indicator {
   position:absolute;
   width:19px;
   height:19px;
@@ -1307,7 +1406,7 @@ background-color: #ca2c37;
   border-radius: 2px;
   left:2px;
 }
-.interface-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+.interface-checkbox input:checked + .checkbox-indicator::before {
   content: "";
   position: absolute;
   width:10px;
@@ -1318,7 +1417,7 @@ background-color: #ca2c37;
   transform: rotate(45deg);
 
 }
-.interface-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+.interface-checkbox input:checked + .checkbox-indicator::after {
   content: "";
   position: absolute;
   width:20px;
@@ -1327,6 +1426,23 @@ background-color: #ca2c37;
   top:40%;
   left:6px;
   transform: rotate(-45deg);
+}
+.interface-checkbox:hover input ~ .checkbox-indicator,
+.interface-checkbox:focus input ~ .checkbox-indicator {
+  border:2px solid #b5b5b5;
+}
+.interface-checkbox:hover input:checked + .checkbox-indicator::before,
+.interface-checkbox:hover input:checked + .checkbox-indicator::after,
+.interface-checkbox:focus input:checked + .checkbox-indicator::before,
+.interface-checkbox:focus input:checked + .checkbox-indicator::after {
+  background-color: #b5b5b5;
+}
+.interface-checkbox:disabled input ~ .checkbox-indicator {
+  border:2px solid #e9e9e9;
+}
+.interface-checkbox:disabled input:checked + .checkbox-indicator::before,
+.interface-checkbox:disabled input:checked + .checkbox-indicator::after {
+  background-color: #e9e9e9;
 }
 .vendors-form,
 .power-form  {
@@ -1371,6 +1487,14 @@ background-color: #ca2c37;
   left:2px;
   top:-1px;
 }
+.interface-radio:hover input ~ .radio-indicator,
+.interface-radio:focus input ~ .radio-indicator {
+  border:4px solid #b5b5b5;
+}
+.interface-radio:hover input:checked + .radio-indicator::before,
+.interface-radio:focus input:checked + .radio-indicator::before {
+  background-color: #b5b5b5;
+}
 .button-show {
   font-size:13px;
   line-height: 18px;
@@ -1379,6 +1503,14 @@ background-color: #ca2c37;
   border:2px solid #e5e5e5;
   margin-top:60px;
   padding:8px 36px;
+  cursor: pointer;
+}
+.button-show:hover,
+.button-show:focus {
+  border:2px solid #bdc6ca;
+}
+.button-show:active {
+  border:2px solid #ee3643;
 }
 .sorting {
   background-color: #f7f3ec;
@@ -1423,9 +1555,21 @@ background-color: #ca2c37;
   text-transform: uppercase;
   border-bottom:1px dotted #ee3643;
 }
+.sorter-name a:hover,
+.sorter-name a:focus {
+  border-bottom:1px solid #ee3643;
+  color:black;
+}
 .sorter-name a.active {
   color:#ee3643;
   border:none;
+}
+.sorter-btn:hover path,
+.sorter-btn:focus path {
+  fill:#231f20;
+}
+.sorter-btn.active path {
+  fill:#ee3643;
 }
 .products-list {
   list-style: none;
@@ -1459,6 +1603,14 @@ background-color: #ca2c37;
   border-radius:2px;
   margin-right:6px;
 }
+.page-number:hover,
+.page-number:focus {
+  outline:1px solid #bdc6ca;
+}
+.page-number:active {
+  outline:1px solid #ee3643;
+}
+
 .page-number.active {
   color:#fef2f2;
   border:none;
