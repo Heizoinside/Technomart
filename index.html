@@ -340,11 +340,11 @@
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами,<br /> заехав в наш офис:</p>
         <div class="map-wrapper">
-          <a href="#" class="image-wrapper modal-map-show">
+          <a href="#" class="image-wrapper modal-map-link">
             <img src="img/mini-map.jpg" alt="Уменьшенная карта">
           </a>
         </div>
-        <a class="button-au modal-show" href="">Заблудились? Напишите нам!</a>
+        <a class="button-au button-write" href="">Заблудились? Напишите нам!</a>
       </section>
     </article>
   </main>
@@ -404,13 +404,13 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <div class="write-form">
         <label class="write-input">Ваше имя:<br />
-          <input type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
+          <input class="writeus__text" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
         </label>
         <label class="write-input">Ваш e-mail:<br />
-          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+          <input class="writeus__text" type="text" name="email" id="email" placeholder="Для отправки ответа">
         </label>
         <label class="write-text">Текст письма:<br />
-          <textarea name="letter" id="letter" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+          <textarea class="writeus__text" name="letter" id="letter" cols="30" rows="5" placeholder="В свободной форме"></textarea>
       </div>
       </label>
       <div class="btn-wrapper">
@@ -423,6 +423,17 @@
       width="940" height="448" frameborder="0" style="border:0" allowfullscreen></iframe>
     <button class="modal-map-close">закрыть</button>
   </div>
+  <div class="modal-in-cart">
+    <div class="notice">
+      <h3>Товар добавлен в корзину!</h3>
+    </div>
+    <div class="modal-cart-buttons">
+      <a class="btn-modal issue" href="">Оформить заказ</a>
+      <a class="btn-modal continue" href="">Продолжить покупки</a>
+    </div>
+    <button class="modal-cart-close"></button>
+  </div>
+  <script src="external.js"></script>
 </body>
 
 </html>
