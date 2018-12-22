@@ -437,21 +437,6 @@ input[type="radio"].visually-hidden {
   width: 620px;
   position: relative;
 }
-.slider-item {
-  width: 620px;
-  min-height: 266px;
-  position: absolute;
-  transition: transform 0.8s ease;
-}
-.slider-item-first {
-  background-image: url('../img/perfos.jpg');
-  background-color: #333028;
-
-}
-.slider-item-second {
-  background-image: url('../img/drills.jpg');
-  background-color: #594f43;
-}
 .slider-inner {
   color:#fff;
   margin-top:-20px;
@@ -462,6 +447,21 @@ input[type="radio"].visually-hidden {
 .slider-items {
   width: 200%;
 min-height: 266px;
+}
+.slider-item {
+  width: 620px;
+  min-height: 266px;
+position: absolute;
+transition: transform .8s ease;
+}
+.slider-item-first {
+  background-image: url('../img/perfos.jpg');
+  background-color: #333028;
+
+}
+.slider-item-second {
+  background-image: url('../img/drills.jpg');
+  background-color: #594f43;
 }
 #slider-1:checked ~ .slider-controls .slider-control-1,
 #slider-2:checked ~ .slider-controls .slider-control-2 {
@@ -483,7 +483,7 @@ background-color: #ca2c37;
   font-size:0;
   background-color: transparent;
   cursor: pointer;
-  z-index: 99;
+  z-index: 1000;
 }
 .arrow-left {
   top:100px;
