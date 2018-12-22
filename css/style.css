@@ -434,25 +434,44 @@ input[type="radio"].visually-hidden {
   background-color:#ffc047;
 }
 .offer-slider {
+  width: 620px;
   position: relative;
 }
+.slider-item {
+  width: 620px;
+  min-height: 266px;
+  position: absolute;
+  transition: transform 0.8s ease;
+}
 .slider-item-first {
-  width:620px;
-  height:266px;
-  background-image: url('../img/drills.jpg');
+  background-image: url('../img/perfos.jpg');
   background-color: #333028;
-  display: none;
+
 }
 .slider-item-second {
-  width:620px;
-  height:266px;
-  background-image: url('../img/perfos.jpg');
-  display: none;
+  background-image: url('../img/drills.jpg');
   background-color: #594f43;
 }
 .slider-inner {
   color:#fff;
   margin-top:-20px;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.slider-items {
+  width: 200%;
+min-height: 266px;
+}
+#slider-1:checked ~ .slider-controls .slider-control-1,
+#slider-2:checked ~ .slider-controls .slider-control-2 {
+background-color: #ca2c37;
+}
+#slider-1:checked ~ .slider-inner .slider-item-first {
+  transform: translate(620px);
+}
+#slider-2:checked ~ .slider-inner .slider-item-second {
+  transform: translate(-620px);
 }
 .slider-arrow {
   width:28px;
@@ -464,6 +483,7 @@ input[type="radio"].visually-hidden {
   font-size:0;
   background-color: transparent;
   cursor: pointer;
+  z-index: 99;
 }
 .arrow-left {
   top:100px;
@@ -496,16 +516,6 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
-}
-#slider-1:checked ~ .slider-controls .slider-control-1,
-#slider-2:checked ~ .slider-controls .slider-control-2 {
-background-color: #ca2c37;
-}
-#slider-1:checked ~ .slider-inner .slider-item-first {
-  display:block;
-}
-#slider-2:checked ~ .slider-inner .slider-item-second {
-  display:block;
 }
 .open-catalog {
   color:#fff;
